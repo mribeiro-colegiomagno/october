@@ -59,7 +59,7 @@ Agora, crie um usuário e lhe conceda privilégios completos sobre o banco de da
 
     CREATE USER 'usuario'@'%' IDENTIFIED WITH mysql_native_password BY 'Senha';
 
-Agora, precisamos dar a este usuário permissão para o banco de dados magno:
+Agora, precisamos dar a este usuário permissão para o banco de dados :
 
     GRANT ALL ON usuario.* TO 'nomedabase'@'%';
 
