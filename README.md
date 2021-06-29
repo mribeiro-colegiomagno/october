@@ -99,7 +99,7 @@ Subir conteúdo da pasta para:
     DB_PORT=3306
     DB_DATABASE='nomedabase'
     DB_USERNAME='usuario'
-    DB_PASSWORD='Senha'
+    DB_PASSWORD='senha'
     
  # Arquivo de configuração apache2.conf
  
