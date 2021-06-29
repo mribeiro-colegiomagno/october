@@ -103,9 +103,23 @@ Subir conteúdo da pasta para:
     
  # Arquivo /etc/apache2/apache2.conf
  
+ 
+ Edite o arquivo /etc/apache2/apache2.conf
+
+    <Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+e mude para;
+
+    <Directory /var/www/>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
     
-    <Directory /var/www/html>
-	Options Indexes FollowSymLinks
-	AllowOverride ALL
-	Require all granted
-    </Directory> 
+então,
+
+    sudo service apache2 restart
+ 
