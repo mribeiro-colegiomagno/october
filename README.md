@@ -101,19 +101,24 @@ Subir conteúdo da pasta para:
     DB_USERNAME='magno'
     DB_PASSWORD='Senha'
     
- # Arquivo /etc/apache2/apache2.conf
+ # Arquivo de configuração apache2.conf
  
  
- Edite o arquivo /etc/apache2/apache2.conf
+ Edite o arquivo apache2.conf
+ 
+    sudo nano /etc/apache2/apache2.conf
+    
+Localize o trecho: 
 
-    <Directory /var/www/>
+    <Directory /var/www/html>
         Options Indexes FollowSymLinks
         AllowOverride None
         Require all granted
     </Directory>
+    
 e mude para;
 
-    <Directory /var/www/>
+    <Directory /var/www/html>
         Options Indexes FollowSymLinks
         AllowOverride All
         Require all granted
