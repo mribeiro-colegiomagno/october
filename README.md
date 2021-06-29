@@ -53,29 +53,29 @@ Assim que a instalação terminar, você pode executar o seguinte comando para c
 # Comandos Mysql
 Criar o database:
 
-    CREATE DATABASE magno;
+    CREATE DATABASE nomedabase;
 
 Agora, crie um usuário e lhe conceda privilégios completos sobre o banco de dados personalizado que acabou de criar. 
 
-    CREATE USER 'magno'@'%' IDENTIFIED WITH mysql_native_password BY 'Senha';
+    CREATE USER 'usuario'@'%' IDENTIFIED WITH mysql_native_password BY 'Senha';
 
 Agora, precisamos dar a este usuário permissão para o banco de dados magno:
 
-    GRANT ALL ON magno.* TO 'magno'@'%';
+    GRANT ALL ON usuario.* TO 'nomedabase'@'%';
 
 Em seguida, saia do shell do MySQL:
 
     exit
 
 Agora você pode testar se o novo usuário tem as permissões adequadas fazendo login no console MySQL novamente:
-Observe a flag -p neste comando, a qual irá solicitar a senha utilizada ao criar o usuário magno.
-Após fazer login no console do MySQL, confirme que você tem acesso ao banco de dados magno:
+Observe a flag -p neste comando, a qual irá solicitar a senha utilizada ao criar o usuário .
+Após fazer login no console do MySQL, confirme que você tem acesso ao banco de dados:
 
-    mysql -u magno -p
+    mysql -u usuario -p
 
 importar arquivo sql
 
-    use magno;
+    use nomedabase;
     source /var/www/html/dump.sql ;
     show tables;
 
@@ -93,12 +93,12 @@ Subir conteúdo da pasta para:
 # Arquivo de credenciais  .Env
 
     APP_DEBUG=true
-    APP_URL=http://200.187.70.30
+    APP_URL=http://seu.ip.local.aqui
     DB_CONNECTION=mysql
     DB_HOST=localhost
     DB_PORT=3306
-    DB_DATABASE='magno'
-    DB_USERNAME='magno'
+    DB_DATABASE='nomedabase'
+    DB_USERNAME='usuario'
     DB_PASSWORD='Senha'
     
  # Arquivo de configuração apache2.conf
