@@ -101,7 +101,7 @@ Subir conteúdo da pasta para:
     DB_USERNAME='magno'
     DB_PASSWORD='Senha'
     
- # Arquivo apache2.conf
+ # Arquivo /etc/apache2/apache2.conf
  
     
     <Directory /var/www/html>
