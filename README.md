@@ -100,3 +100,12 @@ Subir conteúdo da pasta para:
     DB_DATABASE='magno'
     DB_USERNAME='magno'
     DB_PASSWORD='Senha'
+    
+ # Arquivo apache2.conf
+ 
+    
+    <Directory /var/www/html>
+	Options Indexes FollowSymLinks
+	AllowOverride ALL
+	Require all granted
+    </Directory> 
